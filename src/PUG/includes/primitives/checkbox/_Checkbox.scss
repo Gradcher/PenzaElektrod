@@ -1,0 +1,51 @@
+.checkbox {
+    display: block;
+    max-width: 100%;
+    width: 370px;
+    cursor: pointer;
+
+    &__text {
+        position: relative;
+        overflow: hidden;
+        padding-left: 30px;
+        text-overflow: ellipsis;
+        font-size: rem(14);
+        line-height: rem(20);
+        font-weight: 400;
+        color: $darkGray;
+
+        &::before {
+            @include size(rem(20));
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            display: block;
+            border: 1px solid $darkGray;
+            border-radius: $base-radius;
+            margin-right: 10px;
+            background-color: $lightGray;
+            transition-duration: $base-animation-duration;
+        }
+
+        &::after {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            content: url("../SVG/check-icon.svg");
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            display: block;
+            transition-duration: $base-animation-duration;
+        }
+    }
+
+    &__el {
+        display: none;
+
+        &:checked + .checkbox__text::after {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+// Main
+@import "./utils/vars";
+@import "./utils/fonts";
+@import "./utils/mixins";
+@import "./utils/functions";
+@import "./utils/standartProp";
+
+// Primitives
+@import "../PUG/includes/primitives/buttons/Buttons";
+@import "../PUG/includes/primitives/textField/TextField";
+@import "../PUG/includes/primitives/checkbox/Checkbox";
+
+// Base blocks
+@import "../PUG/includes/baseBlocks/requestPopUp/RequestPopUp";
+
+// Page components
+@import "../PUG/includes/pageComponents/elektrod/Elektrod";
+
+// Main
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: inherit; // inherit = body min-width: 100vh
+}
+
+.content {
+    flex-grow: 1; // for pressing footer
+}
+
+.overlay {
+    z-index: $overlay-z-ind;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition-duration: $base-animation-duration;
+
+    &--active {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+
+    & > .product-name {
+        margin-top: 87px;
+    }
+}
+
+@import "./utils/media";

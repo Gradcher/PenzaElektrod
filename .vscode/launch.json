@@ -1,0 +1,37 @@
+{
+    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Chrome",
+            "request": "launch", //нужен был launch, а не attach, который стоял изначально
+            "type": "chrome",
+            "url": "http://localhost:8082/",
+            /*
+        Чтобы все сработало, нужно сначала создать chrome shortcut(если он не создан. После создания будем
+        каждый раз запускать chrome через этот shortcut для debugging).
+        Properties нашего shortcut-a следует изменить
+        Для этого заходим в Properties shortcut-a,и меняем target на следующую команду:
+        "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222
+        После нужно закрыть все процессы chrome через диспетчер устройств и открыть chrome через наш shortcut.
+        Далее нужно запустить Live Server.
+        И в конце запускаем сам dubugger(зеленый треугольничек). Откроется та страница, которая прописана в "url".
+
+        Debugging производится через сам chrome.(breakpoint-ы, отладка — все это делает через chrome)
+        Отображение информации будет в VSC
+
+        Чуть не забыл. Чтобы все это работало нужно установить плагин "Debugger for Chrome".
+
+        Более подробно в ссылках ниже:
+        https://github.com/microsoft/vscode-chrome-debug/issues/111
+        https://stackoverflow.com/questions/36783068/cannot-connect-to-the-target-connect-econnrefused-127-0-0-19222
+        Видео по настройке:
+        https://www.youtube.com/watch?v=AX7uybwukkk&t=1s 12:30
+        */
+
+            "webRoot": "${workspaceFolder}/src"
+        }
+    ]
+}

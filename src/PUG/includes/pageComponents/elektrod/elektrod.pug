@@ -1,0 +1,47 @@
+include ../../primitives/buttons/buttons.pug
+
+.wrapper
+    .content
+        .overlay#overlay
+        include ../../baseBlocks/requestPopUp/requestPopUp.pug
+        .container
+            .product-name.product-name--bestseller
+                h2.product-name__descrp ПЭ LB-52U ГОСТ
+                .product-name__bestseller-tag
+                    span.product-name__bestseller-tag-text Хит продаж
+        .product-descr
+            .container
+                img.product-descr__image(src="http://localhost:8082/assets/IMG/elektrod.png", alt="product-image")
+                ul.product-descr__list
+                    li.product-descr__list-item
+                        p.product-descr__list-item-title.product-descr__list-item-title--ico-shortcut Цена(без НДС)
+                        ul.product-descr__parameters-list
+                            li.product-descr__parameters-item.product-descr__parameters-item--increased
+                                p.product-descr__parameters-item-text от 107 ₽/кг
+                    li.product-descr__list-item
+                        p.product-descr__list-item-title.product-descr__list-item-title--ico-diameter Диаметр
+                        ul.product-descr__parameters-list
+                            li.product-descr__parameters-item
+                                p.product-descr__parameters-item-text 2,5 мм
+                            li.product-descr__parameters-item
+                                p.product-descr__parameters-item-text 3 мм
+                            li.product-descr__parameters-item
+                                p.product-descr__parameters-item-text 4 мм
+                            li.product-descr__parameters-item
+                                p.product-descr__parameters-item-text 5 мм
+                    li.product-descr__list-item
+                        p.product-descr__list-item-title.product-descr__list-item-title--ico-box Упаковка
+                        ul.product-descr__parameters-list
+                            li.product-descr__parameters-item
+                                p.product-descr__parameters-item-text 1 кг
+                            li.product-descr__parameters-item
+                                p.product-descr__parameters-item-text 1.5 кг
+                            li.product-descr__parameters-item
+                                p.product-descr__parameters-item-text 2.5 кг
+                            li.product-descr__parameters-item
+                                p.product-descr__parameters-item-text 5 кг
+                    li.product-descr__list-item
+                        p.product-descr__list-item-title.product-descr__list-item-title--ico-spark Тип электродов <span class = ".product-descr__list-item-elektrod-type">Э50А</span>
+                +button({modificators: ["btn--unfilled"], text: "оформить заявку", typeAttr: "button", dataAttrs: {name: "data-model-target", value: "#requestPopUp"}})
+                .product-descr__image-wrapper
+                    img.product-descr__image(src="http://localhost:8082/assets/IMG/elektrod.png", alt="product-image")

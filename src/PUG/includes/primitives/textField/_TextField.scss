@@ -1,0 +1,29 @@
+.text-field {
+    height: 50px;
+    max-width: 100%;
+    width: 370px;
+    box-sizing: border-box;
+
+    &__input {
+        display: block;
+        border: 1px solid $darkGray;
+        border-radius: $base-radius;
+        background-color: $lightGray;
+        height: inherit;
+        width: 100%;
+        padding: 0 15px;
+        font-size: rem(14);
+        font-weight: 400;
+        color: $darkGray;
+        transition-duration: $base-animation-duration;
+
+        &::placeholder {
+            color: $darkGray;
+            transition-duration: $base-animation-duration;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

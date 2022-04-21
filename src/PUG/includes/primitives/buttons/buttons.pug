@@ -1,0 +1,22 @@
+mixin button(options)
+    -
+        var text = options.text
+        var typeAttr = options.typeAttr
+        var id = options.id
+
+        var linkType = options.linkType
+        var linkPath = options.linkPath
+
+        var modificators = options.modificators
+        var classes = ["btn", modificators]
+        var attributes = {}
+
+    if options.dataAttrs
+        - attributes[`${options.dataAttrs.name}`] = options.dataAttrs.value
+
+    if linkType
+        a&attributes(attributes)(class = classes id = id href=`${linkPath}.html`)
+            p.btn__text= text
+    else
+        button&attributes(attributes)(class = classes id = id type = typeAttr)
+            p.btn__text= text

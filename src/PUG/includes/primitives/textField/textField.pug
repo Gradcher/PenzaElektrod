@@ -1,0 +1,12 @@
+mixin textField (options)
+    -
+        var typeValue = options.type
+        var placeholderValue = options.placeholder
+        var nameValue = options.name
+
+    if typeValue == "password"
+        .text-field
+            input.text-field__input(type=typeValue, placeholder=placeholderValue, name=nameValue, autocomplete="on")
+    else
+        .text-field
+            input.text-field__input(type=typeValue, placeholder=placeholderValue, name=nameValue)

@@ -1,0 +1,12 @@
+mixin checkbox(options)
+    -
+        var text = options.text;
+        var checked = options.active;
+
+    label(class = "checkbox")
+        if checked
+            input(class = "checkbox__el", type = "checkbox", checked)
+            p(class = "checkbox__text")= text
+        else
+            input(class = "checkbox__el", type = "checkbox")
+            p(class = "checkbox__text")= text

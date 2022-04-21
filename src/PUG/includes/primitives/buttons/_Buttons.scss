@@ -1,0 +1,43 @@
+.btn {
+    display: block;
+    border-radius: $base-radius;
+    min-width: 150px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    transition-duration: $base-animation-duration;
+    text-align: center;
+
+    &__text {
+        text-transform: uppercase;
+        font-size: rem(14);
+        font-weight: 500;
+        text-align: center;
+    }
+
+    &--filled {
+        background-color: $red;
+        height: 50px;
+
+        & > .btn__text {
+            color: #fff;
+        }
+    }
+
+    &--unfilled {
+        border: 2px $red solid;
+        background-color: #fff;
+        height: 60px;
+
+        & > .btn__text {
+            color: $red;
+        }
+
+        &:hover {
+            background-color: $red;
+
+            & > .btn__text {
+                color: #fff;
+            }
+        }
+    }
+}

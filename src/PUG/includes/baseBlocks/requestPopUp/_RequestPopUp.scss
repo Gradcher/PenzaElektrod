@@ -1,0 +1,84 @@
+.request-pop-up-wrapper {
+}
+// created only because of padding
+
+.request-pop-up {
+    z-index: $pop-up-z-ind;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    max-width: 430px;
+    min-width: 280px;
+    width: 100%;
+    padding: 0 20px;
+
+    &--active {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__design {
+        background-color: #fff;
+        transition-duration: $base-animation-duration;
+        box-shadow: $pop-up-shadow;
+    }
+
+    &__header {
+        position: relative;
+        background-color: $lightGray;
+        padding: 42px 30px 16px;
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        height: 26px;
+        width: 26px;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: rem(20);
+        font-weight: 700;
+    }
+
+    &__content {
+        padding: 20px 30px 30px;
+    }
+
+    &__content-wrapper {
+        & > * + *:not(:last-child) {
+            margin-top: 15px;
+        }
+
+        & > *:last-child {
+            margin-top: 30px;
+        }
+    }
+}
+
+.request-pop-up__close-btn::before,
+.request-pop-up__close-btn::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 12px;
+    content: "";
+    margin: auto;
+    background-color: $black;
+    height: 20px;
+    width: 2px;
+}

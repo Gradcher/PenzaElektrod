@@ -1,0 +1,17 @@
+include ../../primitives/buttons/buttons.pug
+include ../../primitives/textField/textField.pug
+include ../../primitives/checkbox/checkbox.pug
+include ../../primitives/buttons/buttons.pug
+
+.request-pop-up.js-pop-up#requestPopUp
+    .request-pop-up__design
+        .request-pop-up__header
+            button.request-pop-up__close-btn.js-close-pop-up(type = "button")
+            h2.request-pop-up__title#popUpTitle Заявка на
+        form.request-pop-up__content
+            .request-pop-up__content-wrapper
+                +textField({type: "text", id: "fieldUsername", placeholder: "Имя", name: "suer-name"})
+                +textField({type: "tel", id: "fieldPhone", placeholder: "Телефон", name: "phone"})
+                +textField({type: "email", id: "fieldEmail", placeholder: "Email", name: "email-address"})
+                +checkbox({text: "Даю согласие на обработку персональных данных", active: false})
+                +button({modificators: ["btn--filled"], text: "отправить", typeAttr: "button"})

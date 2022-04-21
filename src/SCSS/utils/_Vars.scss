@@ -1,0 +1,28 @@
+// Devices' size
+$largeDekstopWidth: 1920px;
+$dekstopWidth: 1280px;
+$smallDesktopWidth: 980px;
+$tabletWidth: 768px;
+$phoneWidth: 480px;
+$smallPhoneWidth: 320px;
+
+// Colors
+$red: #e31e25;
+$yellow: #fec022;
+$lightGray: #f1f2f2;
+$darkGray: #898989;
+$black: #1a1a18;
+$transparent-red: #eeee;
+
+// Border-radius
+$base-radius: 4px;
+
+// Animation-duration
+$base-animation-duration: 0.2s;
+
+// Shadows
+$pop-up-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+//z-indexes
+$pop-up-z-ind: 99;
+$overlay-z-ind: calc(#{$pop-up-z-ind} - 1);
